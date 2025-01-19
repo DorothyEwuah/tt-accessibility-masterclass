@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Perceivable Principle Activity</title>
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        background-color: #fff; /* Neutral background for readability */
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 20px;
+        padding: 20px;
+        margin: 0;
+      }
+
+         /* Card Container */
+         .card {
+        background-color: #fff;
+        width: 280px;
+        border-radius: 12px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 6px 20px rgba(0, 0, 0, 0.15);
+        text-align: center;
+        overflow: hidden;
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      /* Hover Effect for Cards */
+      .card:hover {
+        transform: translateY(-7px);
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 10px 25px rgba(0, 0, 0, 0.3);
+      }
+
+
+      /* Header Style */
+      .header {
+        padding: 25px;
+        font-size: 18px;
+        border-radius: 12px 12px 0 0;
+      }
+
+      /* Text Block Styles (Problematic Backgrounds) */
+      .red {
+        background-color: #ff0000; /* Red background */
+        color: white;
+      }
+      .orange {
+        background-color: #ffa500; /* Orange background */
+        color: white;
+      }
+      .yellow {
+        background-color: #ffff00; /* Yellow background */
+        color: #333; /* Borderline contrast */
+      }
+      .blue {
+        background-color: #0000ff; /* Blue background */
+        color: white;
+      }
+      .purple {
+        background-color: #800080; /* Purple background */
+        color: white;
+      }
+
+       /* Content Container */
+       .container {
+        padding: 10px;
+        color: #000; /* Default text color */
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Red Card -->
+    <div class="card">
+      <div class="header red">
+        <p>Contrast ratio: 4.0:1 (Fix this)</p>
+      </div>
+      <div class="container">
+        <p>This background color doesn't meet WCAG AA standards for normal text.</p>
+      </div>
+    </div>
+
+    <!-- Orange Card -->
+    <div class="card">
+      <div class="header orange">
+        <p>Contrast ratio: 3.0:1 (Fix this)</p>
+      </div>
+      <div class="container">
+        <p>This background color doesn't meet WCAG AA standards for normal text.</p>
+      </div>
+    </div>
+
+    <!-- Yellow Card -->
+    <div class="card">
+      <div class="header yellow">
+        <p>Contrast ratio: 4.5:1 (Borderline - Improve it)</p>
+      </div>
+      <div class="container">
+        <p>This background color is borderline acceptable, but readability can be improved.</p>
+      </div>
+    </div>
+
+    <!-- Blue Card -->
+    <div class="card">
+      <div class="header blue">
+        <p>Contrast ratio: 2.0:1 (Fix this)</p>
+      </div>
+      <div class="container">
+        <p>This background color doesn't meet WCAG AA standards for normal text.</p>
+      </div>
+    </div>
+
+    <!-- Purple Card -->
+    <div class="card">
+      <div class="header purple">
+        <p>Contrast ratio: 2.5:1 (Fix this)</p>
+      </div>
+      <div class="container">
+        <p>This background color doesn't meet WCAG AA standards for normal text.</p>
+      </div>
+    </div>
+  </body>
+</html>

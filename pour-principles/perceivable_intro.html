@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <style>
+      /* General Styles */
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 20px;
+        height: 100vh;
+        margin: 0;
+        background-color: #f5f5f5; /* Neutral background */
+      }
+
+      /* Card Container */
+      .card {
+        background-color: #ffffff; /* White background for good contrast */
+        width: 300px; /* Slightly larger for better readability */
+        border-radius: 12px; /* Smooth rounded corners */
+        box-shadow: 0 4px 6px rgba(160, 160, 160, 0.2),
+          0 8px 20px rgba(160, 160, 160, 0.3); /* Softer, layered shadow */
+        text-align: center;
+        overflow: hidden; /* Prevents content overflow */
+        margin: 20px; /* Add spacing around the card */
+        transition: transform 0.3s ease, box-shadow 0.3s ease; /* Interactive hover effects */
+      }
+
+      /* Hover Effect */
+      .card:hover {
+        transform: translateY(-5px); /* Subtle lift on hover */
+        box-shadow: 0 6px 10px rgba(160, 160, 160, 0.3),
+          0 10px 25px rgba(160, 160, 160, 0.4); /* Stronger shadow on hover */
+      }
+
+      /* Header with bad contrast */
+      .header {
+        background-color: #bdff00; 
+        color: white; /* Poor contrast with background */
+        padding: 10px;
+        font-size: 20px;
+      }
+
+      /* Card Content Container */
+      .container {
+        padding: 10px;
+      }
+
+      /* Card Text */
+      .container p {
+        font-size: 14px;
+        color: #333; /* Neutral and accessible */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- Bad Contrast Card -->
+    <div class="card">
+      <div class="header">
+        <p>Turntabl a11y masterclass</p>
+      </div>
+      <div class="container">
+        <p>How perceivable is the text above?</p>
+      </div>
+    </div>
+  </body>
+</html>

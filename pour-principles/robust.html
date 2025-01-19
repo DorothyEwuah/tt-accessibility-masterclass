@@ -1,0 +1,44 @@
+
+
+<style>
+  .fake-button {
+    background-color: #2e4757;
+    color: white;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: inline-block;
+    margin: 10px;
+    border-radius: 10px;
+  }
+</style>
+
+<!-- Poor Structure: Using div as button -->
+<div class="fake-button" onclick="handleClick()">
+  Click me (Poorly Structured)
+</div>
+
+<!-- Problems with this approach:
+- Not keyboard accessible
+- No built-in button behaviors
+- Missing ARIA roles
+- No focus states -->
+
+<!-- Semantic Structure: Using button element -->
+<button
+  type="button"
+  onclick="handleClick()"
+  aria-label="Submit form"
+  style="
+    background-color: #2e4757;
+    color: white;
+    padding: 10px 20px;
+    margin: 10px;
+    border-radius: 10px;">
+  Click me (Semantic HTML)
+</button>
+
+<!-- Benefits:
+- Naturally keyboard accessible
+- Built-in button behaviors
+- Proper focus states
+- Screen reader friendly -->
