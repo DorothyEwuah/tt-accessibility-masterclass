@@ -44,8 +44,8 @@ The project repository is organized into logical sections for easier navigation:
 ├── /persona-challenge/       # Persona cards and mock UI for activity
 ├── /testing-tools/           # Tools and techniques for debugging accessibility
 ├── /workflow-integration/    # Future examples for CI/CD automation
+├── /ttlearnstartercode/      # starter code for masterclass project
 ├── README.md                 # Overview and instructions
-└── index.html                # Starting point for the project
 ```
 ---
 
