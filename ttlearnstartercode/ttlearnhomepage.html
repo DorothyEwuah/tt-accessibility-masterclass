@@ -1,160 +1,77 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <link rel="stylesheet" href="ttlearnhomepage.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ttLearn Platform</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" rel="stylesheet">
+    <link href = "./ttlearnhomepage.css" rel = "stylesheet">
 </head>
 <body>
-    <!-- Header without proper navigation semantics -->
-    <div class="header">
-        <div class="logo">
-            <img src="./assets/images/ttLearn-logo-black.png" style="border-radius: 50%;" />
-            <!-- <span>ttLearn</span> -->
+    <nav class="navbar">
+        <a href="#" class="logo">ttLearn</a>
+        <div class="search-container">
+            <input type="text" class="search-input" placeholder="Search courses...">
+            <button class="search-button">Search</button>
         </div>
-        
-        <!-- Search without label or proper form -->
-        <input type="text" class="search-box" placeholder="Search" />
-        
-        <!-- Navigation without proper semantics -->
-        <div class="nav-buttons">
-            <span onclick="alert('Explore')">Explore Courses</span>
-            <span onclick="alert('Organizations')">Organizations</span>
-            <span onclick="alert('Login')">Log In</span>
-            <span class="btn" onclick="alert('Signup')">Sign up</span>
+        <div class="nav-links">
+            <a href="#">Explore Courses</a>
+            <a href="#">Organizations</a>
+            <a href="#">Log In</a>
+            <a href="#" class="button button-primary">Sign up</a>
         </div>
-    </div>
+    </nav>
 
-    <!-- Hero section without semantic structure -->
-    <div class="hero-section">
-        <div class="hero-image">
-            <!-- Decorative image without alt text -->
-            <img src="./assets/images/Webinar-rafiki.png" />
-        </div>
+    <main class="hero">
+        <img src="./assets/images/Learning-pana.png"/>
         <div class="hero-content">
-            <div style="font-size: 2.5em; margin-bottom: 20px;">
-                Introducing a fun and rewarding way to teach and learn
-            </div>
-            <div style="display: flex; justify-content: center; gap: 20px; margin-top: 20px;">
-                <span class="btn" onclick="alert('Get Started')">Get started for free</span>
-                <span class="btn btn-secondary" onclick="alert('Register')">Register as an organization</span>
+            <h1 class="hero-title">Introducing a fun and rewarding way to teach and learn</h1>
+            <div class="hero-buttons">
+                <a href="#" class="button button-primary">Get started for free</a>
+                <a href="#" class="button button-secondary">Register as an organization</a>
             </div>
         </div>
-    </div>
+    </main>
 
-    <!-- Trusted section -->
-    <div class="trusted-section">
-        <div style="color: #666;">Trusted by top organizations</div>
-        <div style="display: flex; justify-content: center; gap: 50px; margin-top: 20px;">
-            <!-- Images without alt text -->
-            <img src="/assets/images/turntabl-logo.png" />
-            <img src="/assets/images/turntabl-logo.png" />
-            <img src="/assets/images/turntabl-logo.png" />
-            <img src="/assets/images/turntabl-logo.png" />
+    <section class="trusted-section">
+        <h2 class="trusted-title">Trusted by top organizations</h2>
+        <div class="trusted-logos">
+            <img src="./assets/images/turntabl-logo.png" alt="Company Logo 1" class="trusted-logo">
+            <img src="./assets/images/turntabl-logo.png" alt="Company Logo 2" class="trusted-logo">
+            <img src="./assets/images/turntabl-logo.png" alt="Company Logo 3" class="trusted-logo">
+            <img src="./assets/images/turntabl-logo.png" class="trusted-logo">
         </div>
-    </div>
+    </section>
 
-    <!-- Courses section -->
-    <div class="courses-section">
-        <div style="display: flex; justify-content: space-between; margin-bottom: 20px;">
-            <div>Try our most popular courses →</div>
-            <!-- Non-semantic navigation -->
-            <div>
-                <span onclick="alert('prev')" style="cursor: pointer; margin-right: 10px;">←</span>
-                <span onclick="alert('next')" style="cursor: pointer;">→</span>
-            </div>
-        </div>
-        
-        <div class="course-cards">
-            <!-- Course cards without proper headings or structure -->
-            <div class="course-card">
-                <div class="course-thumbnail"></div>
-                <div style="font-weight: bold;">Fundamentals of C++</div>
-                <div style="color: #666;">Super Tutor</div>
-                <div>Beginner ⭐⭐⭐⭐½</div>
-            </div>
-            <div class="course-card">
-                <div class="course-thumbnail"></div>
-                <div style="font-weight: bold;">Fundamentals of Java</div>
-                <div style="color: #666;">Super Tutor</div>
-                <div>Beginner ⭐⭐⭐⭐½</div>
-            </div>
-            <div class="course-card">
-                <div class="course-thumbnail"></div>
-                <div style="font-weight: bold;">Artificial Intelligence</div>
-                <div style="color: #666;">Super Tutor</div>
-                <div>Beginner ⭐⭐⭐⭐½</div>
-            </div>
-        </div>
-    </div>
+    <script>
+        // Add smooth scroll behavior
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
 
-    <!-- Why choose section -->
-    <div class="why-choose-section">
-        <div style="flex: 1;">
-            <img src="/api/placeholder/400/300" />
-        </div>
-        <div style="flex: 1;">
-            <div style="font-size: 1.5em; margin-bottom: 20px;">Why choose us?</div>
-            <div style="color: #666;">
-                • Industry relevant course materials<br>
-                • Easy to learn study materials<br>
-                • Instant support when blocked
-            </div>
-            <div style="margin-top: 20px;">
-                <span class="btn" onclick="alert('Get Started')">Get started for free</span>
-            </div>
-        </div>
-    </div>
+        // Add search functionality
+        const searchButton = document.querySelector('.search-button');
+        const searchInput = document.querySelector('.search-input');
 
-    <!-- Features section -->
-    <div class="features-section">
-        <div>Features tailored to suit the needs of<br>your organization and business</div>
-        <span class="btn btn-secondary" onclick="alert('Register')">Register as an organization</span>
-    </div>
+        searchButton.addEventListener('click', () => {
+            const query = searchInput.value.trim();
+            if (query) {
+                // Add your search logic here
+                console.log('Searching for:', query);
+            }
+        });
 
-    <!-- Instructor section -->
-    <div class="instructor-section">
-        <div>
-            <div style="font-size: 1.5em; margin-bottom: 20px;">
-                Passionate to teach? Sign up<br>to become an instructor today!
-            </div>
-            <span class="btn" onclick="alert('Teach')">Start teaching today</span>
-        </div>
-        <img src="/api/placeholder/400/300" />
-    </div>
-
-    <!-- Footer without proper structure -->
-    <div class="footer">
-        <div class="footer-links">
-            <div>
-                <div style="margin-bottom: 15px;">ttLearn for Organizations</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Teach on ttLearn</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Get the app</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">About us</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Contact us</div>
-            </div>
-            <div>
-                <div style="margin-bottom: 15px;">Careers</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Blog</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Help and Support</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Affiliate</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Investors</div>
-            </div>
-            <div>
-                <div style="margin-bottom: 15px;">Terms</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Privacy policy</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Cookie settings</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Sitemap</div>
-                <div style="color: #999; cursor: pointer;" onclick="alert('click')">Accessibility statement</div>
-            </div>
-        </div>
-        
-        <div style="margin-top: 40px; display: flex; justify-content: space-between; align-items: center;">
-            <div class="logo">
-                <img src="/api/placeholder/24/24" style="border-radius: 50%;" />
-                <span style="color: white;">ttLearn</span>
-            </div>
-            <div style="color: #999;">© 2023 Turntabl Ltd.</div>
-        </div>
-    </div>
+        // Add keyboard support for search
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') {
+                searchButton.click();
+            }
+        });
+    </script>
 </body>
 </html>

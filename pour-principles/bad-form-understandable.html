@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bad Form Example</title>
+    <style>
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, sans-serif;
+        }
+
+        body {
+            padding: 2rem;
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.5;
+            background: #f5f5f5;
+        }
+
+        .form-section {
+            background: white;
+            padding: 2rem;
+            border-radius: 8px;
+            margin-bottom: 2rem;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+
+        h2 {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            margin-bottom: 2rem;
+            font-size: 1.75rem;
+            font-weight: 600;
+        }
+
+        .bad-form h2 {
+            color: #dc2626;
+        }
+
+        .form-group {
+            margin-bottom: 1rem;
+        }
+
+        input {
+            width: 100%;
+            padding: 0.75rem;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 1rem;
+        }
+
+        /* Bad Form Specific Styles */
+        .bad-form input {
+            color: #666;
+        }
+
+        .bad-form .submit-btn {
+            background: #ef4444;
+            color: white;
+            text-transform: lowercase;
+        }
+
+        .submit-btn {
+            width: 100%;
+            padding: 0.75rem;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            cursor: pointer;
+            margin-top: 1rem;
+        }
+
+        .error-message {
+            color: #dc2626;
+            font-size: 0.875rem;
+            margin-top: 0.25rem;
+            display: none;
+        }
+
+        .error-message.show {
+            display: block;
+        }
+
+        .issues-list {
+            margin-top: 2rem;
+            padding-left: 1.5rem;
+        }
+
+        .issues-list li {
+            margin-bottom: 0.5rem;
+            color: #666;
+        }
+
+        @media (max-width: 640px) {
+            body {
+                padding: 1rem;
+            }
+            
+            .form-section {
+                padding: 1.5rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <!-- Bad Form Example -->
+    <div class="form-section bad-form">
+        <h2>
+            <span style="color: #dc2626;">✕</span>
+            Bad Form Example
+        </h2>
+        
+        <form>
+            <div class="form-group">
+                <input type="text" placeholder="name">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" placeholder="email">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" placeholder="phone">
+            </div>
+            
+            <div class="form-group">
+                <input type="text" placeholder="password">
+            </div>
+
+            <button type="submit" class="submit-btn">submit</button>
+        </form>
+
+        <ul class="issues-list">
+            <li>No proper labels</li>
+            <li>Missing ARIA attributes</li>
+            <li>No validation</li>
+            <li>Poor contrast</li>
+            <li>No error handling</li>
+            <li>Inconsistent styling</li>
+            <li>No password hiding</li>
+            <li>Missing required fields</li>
+        </ul>
+    </div>
+</body>
+</html>

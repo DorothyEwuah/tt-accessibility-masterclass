@@ -1,19 +1,20 @@
 
 
 <style>
-  .fake-button {
+  .buttons {
     background-color: #2e4757;
     color: white;
-    padding: 10px 20px;
+    padding: 30px 20px;
     cursor: pointer;
     display: inline-block;
     margin: 10px;
-    border-radius: 10px;
+    border-radius: 20px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
   }
 </style>
 
 <!-- Poor Structure: Using div as button -->
-<div class="fake-button" onclick="handleClick()">
+<div class="buttons" onclick="handleClick()">
   Click me (Poorly Structured)
 </div>
 
@@ -26,14 +27,9 @@
 <!-- Semantic Structure: Using button element -->
 <button
   type="button"
+  class="buttons"
   onclick="handleClick()"
-  aria-label="Submit form"
-  style="
-    background-color: #2e4757;
-    color: white;
-    padding: 10px 20px;
-    margin: 10px;
-    border-radius: 10px;">
+  aria-label="Submit form">
   Click me (Semantic HTML)
 </button>
 

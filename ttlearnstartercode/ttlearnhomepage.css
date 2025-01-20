@@ -1,133 +1,192 @@
-body {
-    font-family: Arial, sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap');
+
+:root {
+    --primary-color: #7B68EE;
+    --text-color: #333;
+    --background-light: #f8f9fa;
+    --background-deep: #D9D9D9;
+}
+
+* {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
 }
 
-.header {
+body {
+    font-family: 'Space Grotesk', sans-serif;
+    line-height: 1.6;
+    color: var(--text-color);
+}
+
+.navbar {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 15px 30px;
+    padding: 1rem 5%;
+    background: white;
     box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
 }
 
 .logo {
     display: flex;
     align-items: center;
-    gap: 8px;
-    color: #000;
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: var(--text-color);
     text-decoration: none;
 }
 
-.search-box {
-    background: #f0f0ff;
-    border: none;
-    padding: 8px 15px;
-    width: 200px;
-}
-
-.nav-buttons span {
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-.hero-section {
+.search-container {
     display: flex;
     align-items: center;
-    padding: 50px;
-    background: #fff;
+    background: var(--background-light);
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    width: 300px;
+    border: 2px dotted var(--background-deep);
+}
+
+.search-input {
+    border: none;
+    background: none;
+    width: 100%;
+    padding: 0.5rem;
+    font-family: inherit;
+    font-size: 1rem;
+}
+
+.search-input:focus {
+    outline: none;
+}
+
+.search-button {
+    background: var(--primary-color);
+    color: white;
+    border: none;
+    padding: 0.5rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-family: inherit;
+}
+
+.nav-links {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--text-color);
+    font-weight: 500;
+}
+
+.hero {
+    display: flex;
+    align-items: center;
+    gap: 10rem;
+    justify-content: center;
+    padding: 8rem 5% 4rem;
+    background: linear-gradient(45deg, #f8f9fa 30%, #fff 100%);
+    
 }
 
 .hero-content {
-    flex: 1;
+    max-width: 600px;
 }
 
-.hero-image {
-    flex: 1;
-    text-align: center;
+.hero-title {
+    font-size: 3.5rem;
+    line-height: 1.2;
+    margin-bottom: 1.5rem;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1rem;
+    margin-top: 2rem;
+}
+
+.button {
+    padding: 0.8rem 1.5rem;
+    border-radius: 8px;
+    font-weight: 500;
+    text-decoration: none;
+    transition: transform 0.2s;
+}
+
+.button-primary {
+    background: var(--primary-color);
+    color: white;
+}
+
+.button-secondary {
+    background: white;
+    color: var(--text-color);
+    border: 2px solid #e0e0e0;
+}
+
+.button:hover {
+    transform: translateY(-2px);
 }
 
 .trusted-section {
-    background: #f5f5f5;
-    padding: 20px;
+    background: var(--background-deep);
+    padding: 4rem 5%;
     text-align: center;
+    margin: 2rem 5%;
+    border-radius: 24px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
 }
 
-.courses-section {
-    background: #e8e8ff;
-    padding: 40px;
+.trusted-title {
+    font-size: 2rem;
+    margin-bottom: 3rem;
 }
 
-.course-cards {
+.trusted-logos {
     display: flex;
-    gap: 20px;
-    position: relative;
-    overflow: hidden;
+    justify-content: center;
+    gap: 4rem;
+    flex-wrap: wrap;
 }
 
-.course-card {
-    background: white;
-    padding: 15px;
+.logo-placeholder {
+    width: 150px;
+    height: 50px;
+    background: #e0e0e0;
     border-radius: 8px;
-    flex: 1;
 }
 
-.course-thumbnail {
-    background: #ddd;
-    height: 150px;
-    margin-bottom: 10px;
-}
+@media (max-width: 768px) {
+    .navbar {
+        padding: 1rem;
+    }
 
-.why-choose-section {
-    display: flex;
-    padding: 50px;
-    align-items: center;
-    gap: 50px;
-}
+    .search-container {
+        width: auto;
+    }
 
-.features-section {
-    background: #1a1a2e;
-    color: white;
-    padding: 30px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-}
+    .nav-links {
+        display: none;
+    }
 
-.instructor-section {
-    display: flex;
-    padding: 50px;
-    align-items: center;
-    justify-content: space-between;
-}
+    .hero {
+        flex-direction: column;
+        text-align: center;
+        padding: 6rem 1rem 2rem;
+    }
 
-.footer {
-    background: #1a1a2e;
-    color: white;
-    padding: 40px;
-}
+    .hero-title {
+        font-size: 2.5rem;
+    }
 
-.footer-links {
-    display: flex;
-    gap: 100px;
-}
-
-.btn {
-    background: #000;
-    color: white;
-    padding: 15px 25px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.btn-secondary {
-    background: #e8e8ff;
-    color: #000;
-}
-
-/* Intentionally poor focus styles for teaching purposes */
-*:focus {
-    outline: none;
+    .hero-buttons {
+        justify-content: center;
+    }
 }
